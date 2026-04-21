@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Noor Calendar — Promoted by DAN</title>
-<meta name="description" content="Noor Calendar — an Islamic companion with prayer times, Qibla, Hijri calendar, and athkar. Promoted by DAN.">
+<meta name="description" content="Noor Calendar — Islamic companion with prayer times, Qibla, Hijri calendar, athkar. Promoted by DAN. تطبيق إسلامي مجاني بدون إعلانات.">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Noor Calendar">
 <meta property="og:url" content="https://noorcalendar.github.io/dan.html">
-<meta property="og:title" content="Noor Calendar — Your Islamic Companion">
-<meta property="og:description" content="Prayer times · Qibla · Hijri calendar · Athkar. Free, ad-free, fully private.">
+<meta property="og:title" content="Noor Calendar — Your Islamic Companion · رفيقك الإسلامي">
+<meta property="og:description" content="Prayer times · Qibla · Hijri calendar · Athkar. Free, ad-free. مواقيت الصلاة · القبلة · التقويم الهجري.">
 <meta property="og:image" content="https://noorcalendar.github.io/dan-og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -18,84 +18,133 @@
 <meta property="og:locale:alternate" content="ar_AR">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Noor Calendar — Your Islamic Companion">
-<meta name="twitter:description" content="Prayer times, Qibla, Hijri calendar & Athkar. Free, ad-free.">
+<meta name="twitter:title" content="Noor Calendar — Islamic Companion">
+<meta name="twitter:description" content="Prayer times, Qibla, Hijri calendar & Athkar.">
 <meta name="twitter:image" content="https://noorcalendar.github.io/dan-og.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Cairo', Tahoma, sans-serif;
     background: linear-gradient(180deg, #0D4036 0%, #082B24 100%);
     color: #fff; min-height: 100vh;
-    display: flex; align-items: center; justify-content: center;
-    padding: 24px;
+    padding: 24px 16px;
   }
   .card {
-    max-width: 560px; width: 100%;
+    max-width: 600px; margin: 0 auto;
     background: rgba(255,255,255,0.04);
     border: 1px solid rgba(220,180,70,0.25);
     border-radius: 24px; padding: 32px 28px;
-    text-align: center; backdrop-filter: blur(8px);
-    position: relative;
-  }
-  .lang-switch {
-    position: absolute; top: 16px; left: 16px;
-    background: rgba(220,180,70,0.15); color: #F0D282;
-    padding: 6px 14px; border-radius: 20px;
-    text-decoration: none; font-size: 13px; font-weight: 600;
+    backdrop-filter: blur(8px);
   }
   .hero { width: 100%; border-radius: 14px; margin-bottom: 24px; display: block; }
-  h1 { color: #fff; font-size: 28px; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.5px; }
-  .sub { color: #F0D282; font-size: 15px; margin-bottom: 20px; }
+
+  .section { padding: 16px 0; }
+  .section-en { text-align: left; direction: ltr; }
+  .section-ar { text-align: right; direction: rtl; font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif; }
+
+  h1 {
+    color: #fff; font-size: 26px; font-weight: 800;
+    margin-bottom: 8px; letter-spacing: -0.5px;
+  }
+  .section-ar h1 { letter-spacing: 0; font-size: 28px; }
+  .sub { color: #F0D282; font-size: 15px; margin-bottom: 14px; }
   .shared { color: #D2D2D2; font-size: 14px; margin-bottom: 4px; }
   .shared strong { color: #DCB446; letter-spacing: 1px; }
+
   .features {
     background: rgba(0,0,0,0.2); border-radius: 12px;
-    padding: 16px; margin: 24px 0; text-align: left;
+    padding: 14px 16px; margin: 16px 0;
   }
   .features li {
-    list-style: none; padding: 6px 0; color: #E8E2D6; font-size: 14px;
+    list-style: none; padding: 5px 0; color: #E8E2D6; font-size: 14px;
   }
+  .section-ar .features li { font-size: 15px; }
+
+  .divider {
+    margin: 28px 0; position: relative; text-align: center;
+    border-top: 1px solid rgba(220,180,70,0.2);
+    height: 1px;
+  }
+  .divider::before {
+    content: '✦'; position: absolute; top: -10px; left: 50%;
+    transform: translateX(-50%);
+    background: #0D4036; color: #DCB446;
+    padding: 0 12px; font-size: 14px;
+  }
+
+  .btn-container { text-align: center; padding: 18px 0 6px; }
   .btn {
-    display: inline-block; width: 100%;
+    display: inline-block; width: 100%; max-width: 440px;
     background: linear-gradient(135deg, #DCB446 0%, #B89635 100%);
     color: #0D4036; font-weight: 800; font-size: 17px;
     padding: 18px 24px; border-radius: 14px;
-    text-decoration: none; margin-top: 8px;
+    text-decoration: none;
     box-shadow: 0 6px 18px rgba(220,180,70,0.35);
     transition: transform 0.15s;
   }
   .btn:active { transform: scale(0.98); }
-  .footer { color: #8A9690; font-size: 12px; margin-top: 20px; }
+
+  .footer {
+    color: #8A9690; font-size: 12px; margin-top: 24px; text-align: center;
+    padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer .ar { direction: rtl; margin-top: 4px; }
 </style>
 </head>
 <body>
   <main class="card">
-    <a class="lang-switch" href="dan-ar.html">العربية</a>
     <img src="dan-og.png" alt="Noor Calendar" class="hero">
 
-    <p class="shared">Promoted by <strong>DAN</strong></p>
-    <h1>Noor Calendar</h1>
-    <p class="sub">Islamic Diary · Hijri Calendar · Prayer Times</p>
+    <!-- English section -->
+    <section class="section section-en" lang="en">
+      <p class="shared">Promoted by <strong>DAN</strong></p>
+      <h1>Noor Calendar</h1>
+      <p class="sub">Islamic Diary · Hijri Calendar · Prayer Times</p>
 
-    <ul class="features">
-      <li>🕌 Prayer times & Qibla for 38 cities</li>
-      <li>📿 Morning, evening & sleep Athkar</li>
-      <li>📅 Hijri calendar with Islamic holidays</li>
-      <li>✨ 99 Names of Allah & Tasbih counter</li>
-      <li>📖 Daily Du'a & Quran reader</li>
-      <li>🚫 No ads · No tracking · Full privacy</li>
-    </ul>
+      <ul class="features">
+        <li>🕌 Prayer times & Qibla for 38 cities</li>
+        <li>📿 Morning, evening & sleep Athkar</li>
+        <li>📅 Hijri calendar with Islamic holidays</li>
+        <li>✨ 99 Names of Allah & Tasbih counter</li>
+        <li>📖 Daily Du'a & Quran reader</li>
+        <li>🚫 No ads · No tracking · Full privacy</li>
+      </ul>
+    </section>
 
-    <a class="btn"
-       href="https://play.google.com/store/apps/details?id=com.noorcalendar.app&utm_source=dan&utm_medium=social&utm_campaign=partner_launch&utm_content=html_page">
-      📲 Download on Google Play
-    </a>
+    <div class="divider"></div>
 
-    <p class="footer">
-      Noor Calendar &mdash; Free · Ad-free · Private
-    </p>
+    <!-- Arabic section -->
+    <section class="section section-ar" lang="ar" dir="rtl">
+      <p class="shared">بالتعاون مع <strong>DAN</strong></p>
+      <h1>تطبيق نور كالندر</h1>
+      <p class="sub">يوميات إسلامية · التقويم الهجري · مواقيت الصلاة</p>
+
+      <ul class="features">
+        <li>🕌 مواقيت الصلاة واتجاه القبلة لـ 38 مدينة</li>
+        <li>📿 أذكار الصباح والمساء والنوم</li>
+        <li>📅 التقويم الهجري والأعياد الإسلامية</li>
+        <li>✨ أسماء الله الحسنى وتسبيح إلكتروني</li>
+        <li>📖 دعاء يومي وقراءة القرآن الكريم</li>
+        <li>🚫 بدون إعلانات · بدون تتبع · خصوصية كاملة</li>
+      </ul>
+    </section>
+
+    <!-- Shared CTA -->
+    <div class="btn-container">
+      <a class="btn"
+         href="https://play.google.com/store/apps/details?id=com.noorcalendar.app&utm_source=dan&utm_medium=social&utm_campaign=partner_launch&utm_content=bilingual_page">
+        📲 Download on Google Play · حمّل من جوجل بلاي
+      </a>
+    </div>
+
+    <div class="footer">
+      <div>Noor Calendar &mdash; Free · Ad-free · Private</div>
+      <div class="ar">Noor Calendar &mdash; مجاني · بدون إعلانات · خصوصيتك محمية</div>
+    </div>
   </main>
 </body>
 </html>
