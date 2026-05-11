@@ -113,7 +113,7 @@
         <li>📅 التقويم الهجري والأعياد الإسلامية</li>
         <li>✨ أسماء الله الحسنى وتسبيح إلكتروني</li>
         <li>📖 دعاء يومي وقراءة القرآن الكريم</li>
-        <li>🚫 بدون إعلانات · بدون تتبع · خصوصية كاملة</li>
+        <li>🚫 بدون إعلانات · مجانًا · بدون تسجيل</li>
       </ul>
     </section>
 
@@ -131,22 +131,20 @@
         <li>📅 Hijri calendar with Islamic holidays</li>
         <li>✨ 99 Names of Allah &amp; Tasbih counter</li>
         <li>📖 Daily Du'a &amp; Quran reader</li>
-        <li>🚫 No ads · No tracking · Full privacy</li>
+        <li>🚫 No ads · Free · No sign-up</li>
       </ul>
     </section>
 
     <!-- Shared CTA -->
     <div class="btn-container">
-      <a class="btn"
+      <a class="btn" id="dlBtn"
          href="https://play.google.com/store/apps/details?id=com.noorcalendar.app&amp;utm_source=mari1&amp;utm_medium=social&amp;utm_campaign=partner_launch&amp;utm_content=bilingual_page_ar">
         📲 حمّل من Google Play · Download on Google Play
       </a>
     </div>
 
-    <div class="footer">
-      <div class="ar">Noor Calendar &mdash; مجاني · بدون إعلانات · خصوصيتك محمية</div>
-      <div>Noor Calendar &mdash; Free · Ad-free · Private</div>
-    </div>
-  </main>
-</body>
-</html>
+    <script>
+      // Fire-and-forget click beacon to self-hosted stats endpoint.
+      // Uses sendBeacon if available (won't delay the Play Store redirect).
+      (function() {
+        var btn = document.getElement
